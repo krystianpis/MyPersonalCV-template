@@ -1,0 +1,326 @@
+@use './reset';
+@use './colors' as colors;
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: colors.$default-black;
+	background-color: colors.$background-white;
+	font-size: 14px;
+}
+
+// display: flex classes
+
+.language-select,
+.container,
+footer {
+	display: flex;
+}
+
+.language-select,
+footer {
+	justify-content: center;
+}
+
+//header - language selector
+
+.language-select {
+	margin: 10px auto;
+	.language-text {
+		padding: 5px;
+		color: colors.$light-brown;
+		background-color: colors.$dark-blue;
+		border: none;
+		border-radius: 10px;
+		font-size: 1.5rem;
+		font-weight: 700;
+		text-transform: uppercase;
+		text-decoration: none;
+		cursor: pointer;
+	}
+}
+
+// main
+
+.container {
+	margin: 0 auto;
+	width: 210mm;
+	height: 297mm;
+	box-shadow: colors.$shadow;
+	border-radius: 20px;
+}
+
+.separator {
+	width: 100%;
+	height: 0.2rem;
+	background-color: colors.$light-brown;
+}
+
+h2 {
+	font-size: 1.35rem;
+	text-transform: uppercase;
+}
+
+h3 {
+	margin: 0.3rem auto;
+	font-size: 1rem;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+}
+
+.left-side h2 {
+	color: colors.$light-brown;
+}
+
+.right-side h2 {
+	color: colors.$dark-blue;
+	text-align: center;
+}
+
+// left side
+
+.left-side {
+	padding: 3rem;
+	width: 40%;
+	height: 100%;
+	background-color: colors.$dark-blue;
+	border-radius: 20px 0 0 20px;
+}
+
+.profile-img {
+	img {
+		width: 100%;
+		height: 100%;
+		border-radius: 50%;
+	}
+}
+
+.profile-name {
+	margin: 3rem auto;
+	h1 {
+		color: colors.$light-brown;
+		font-size: 2.8rem;
+		text-transform: uppercase;
+		text-align: center;
+	}
+}
+
+.profile-skills {
+	margin: 3rem auto;
+}
+
+.education {
+	margin: 3rem auto;
+}
+
+.ul-list {
+	margin: 0.5rem auto;
+	color: colors.$light-brown;
+	font-size: 0.8rem;
+	list-style: inside;
+}
+
+.contact {
+	margin: 3rem auto;
+}
+
+.contact-text {
+	margin: 0.5rem auto;
+	color: colors.$light-brown;
+	font-size: 0.8rem;
+}
+
+// right side
+
+.right-side {
+	padding: 3rem;
+	width: 60%;
+	height: 100%;
+	background-color: colors.$light-yellow;
+	border-radius: 0 20px 20px 0;
+}
+
+.exp-history {
+	background-color: colors.$light-brown;
+}
+
+.exp-list {
+	margin: 0.5rem auto;
+	.ul-title {
+		margin: 0.5rem auto;
+		font-size: 0.8rem;
+		list-style: none;
+	}
+
+	.work-info {
+		list-style: inside;
+	}
+}
+
+.hobby-list {
+	margin: 0.5rem auto;
+	font-size: 0.8rem;
+}
+
+// icons
+
+.fa-solid {
+	margin-right: 0.5rem;
+	color: colors.$light-brown;
+	font-size: 0.8rem;
+}
+
+// footer
+
+footer {
+	margin: 10px;
+	font-size: 1.5rem;
+	.github-profile {
+		color: colors.$default-black;
+		text-decoration: none;
+	}
+}
+
+// media queries
+
+// smartphones
+
+@media (max-width: 576px) {
+	body {
+		height: 100%;
+	}
+
+	.language-select,
+	.container,
+	footer {
+		flex-direction: column;
+		align-items: center;
+		.language-text {
+			font-size: 1rem;
+		}
+	}
+
+	.container {
+		width: 90%;
+		height: 100%;
+	}
+
+	h2 {
+		font-size: 1rem;
+	}
+
+	h3 {
+		font-size: 0.8rem;
+	}
+
+	.left-side {
+		padding: 1rem;
+		width: 100%;
+		height: 50%;
+		border-radius: 20px 20px 0 0;
+	}
+
+	.profile-name {
+		margin: 1rem auto;
+		h1 {
+			font-size: 2rem;
+		}
+	}
+
+	.profile-skills,
+	.education,
+	.contact {
+		margin: 1rem auto;
+		text-align: center;
+	}
+
+	.right-side {
+		padding: 1rem;
+		width: 100%;
+		height: 50%;
+		border-radius: 0 0 20px 20px;
+	}
+
+	footer {
+		margin: 10px auto 50px;
+		font-size: 1rem;
+	}
+}
+
+// tablets and smartphones horizontally
+
+@media (min-width: 576px) and (max-width: 1200px) {
+	body {
+		height: 100%;
+	}
+
+	.language-select,
+	.container,
+	footer {
+		flex-direction: column;
+		align-items: center;
+		.language-text {
+			font-size: 1.3rem;
+		}
+	}
+
+	.container {
+		width: 70%;
+		height: 100%;
+	}
+
+	h2 {
+		font-size: 1.5rem;
+	}
+
+	h3 {
+		font-size: 1.2rem;
+	}
+
+	.left-side {
+		padding: 1rem;
+		width: 100%;
+		height: 50%;
+		border-radius: 20px 20px 0 0;
+	}
+
+	.profile-img {
+		display: flex;
+		justify-content: center;
+		img {
+			width: 50%;
+			height: 50%;
+		}
+	}
+
+	.profile-name {
+		margin: 1rem auto;
+		h1 {
+			font-size: 2.7rem;
+		}
+	}
+
+	.profile-skills,
+	.education,
+	.contact {
+		margin: 1rem auto;
+		text-align: center;
+	}
+
+	.right-side {
+		padding: 1rem;
+		width: 100%;
+		height: 50%;
+		border-radius: 0 0 20px 20px;
+	}
+
+	.ul-title,
+	.work-info,
+	.hobby-list {
+		text-align: center;
+	}
+
+	footer {
+		margin: 10px auto 50px;
+		font-size: 1.3rem;
+	}
+}
